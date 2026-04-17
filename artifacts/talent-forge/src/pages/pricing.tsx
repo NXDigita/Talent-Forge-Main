@@ -22,26 +22,26 @@ export default function Pricing() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0F172A] pt-24 pb-24">
+    <div className="min-h-screen bg-background pt-24 pb-24">
       <div className="container mx-auto max-w-6xl px-4">
         
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-zinc-900 mb-6">
             Simple, Transparent Pricing
           </h1>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-10">
+          <p className="text-xl text-zinc-500 max-w-2xl mx-auto mb-10">
             Choose the plan that fits your needs. No hidden fees, ever.
           </p>
           
           <div className="flex items-center justify-center gap-4">
-            <span className={`text-sm font-medium ${!isAnnual ? 'text-white' : 'text-slate-400'}`}>Monthly</span>
+            <span className={`text-sm font-medium ${!isAnnual ? 'text-zinc-900' : 'text-zinc-500'}`}>Monthly</span>
             <ToggleSwitch 
               checked={isAnnual} 
               onCheckedChange={setIsAnnual} 
               className="data-[state=checked]:bg-blue-600"
             />
-            <span className={`text-sm font-medium ${isAnnual ? 'text-white' : 'text-slate-400'} flex items-center gap-2`}>
+            <span className={`text-sm font-medium ${isAnnual ? 'text-zinc-900' : 'text-zinc-500'} flex items-center gap-2`}>
               Annually
               <span className="bg-green-500/20 text-green-400 text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full font-bold">
                 Save 33%
@@ -54,52 +54,52 @@ export default function Pricing() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 max-w-5xl mx-auto">
           {/* Free Plan */}
           <div className="glass-card p-8 flex flex-col h-full">
-            <h3 className="text-xl font-bold text-white mb-2">Student Basic</h3>
-            <p className="text-slate-400 text-sm mb-6 h-10">Essential tools to prove your skills and get noticed.</p>
+            <h3 className="text-xl font-bold text-zinc-900 mb-2">Student Basic</h3>
+            <p className="text-zinc-500 text-sm mb-6 h-10">Essential tools to prove your skills and get noticed.</p>
             <div className="mb-8">
-              <span className="text-5xl font-bold text-white">₹0</span>
-              <span className="text-slate-400">/forever</span>
+              <span className="text-5xl font-bold text-zinc-900">₹0</span>
+              <span className="text-zinc-500">/forever</span>
             </div>
             <ul className="space-y-4 mb-8 flex-1">
               {['Basic public profile', 'Up to 3 skill assessments/mo', 'Community forum access', 'Standard job matching'].map((feature, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-slate-500 shrink-0" />
-                  <span className="text-slate-300 text-sm">{feature}</span>
+                  <CheckCircle2 className="w-5 h-5 text-zinc-9000 shrink-0" />
+                  <span className="text-zinc-600 text-sm">{feature}</span>
                 </li>
               ))}
               {['Blockchain verified credentials', 'Priority placement'].map((feature, i) => (
                 <li key={i} className="flex items-start gap-3 opacity-50">
                   <X className="w-5 h-5 text-slate-600 shrink-0" />
-                  <span className="text-slate-400 text-sm line-through">{feature}</span>
+                  <span className="text-zinc-500 text-sm line-through">{feature}</span>
                 </li>
               ))}
             </ul>
-            <Button onClick={() => handlePlanSelection('Free')} variant="outline" className="w-full border-slate-700 text-white hover:bg-slate-800">
+            <Button onClick={() => handlePlanSelection('Free')} variant="outline" className="w-full border-zinc-200 text-zinc-900 hover:bg-zinc-100">
               Get Started
             </Button>
           </div>
 
           {/* Pro Plan */}
-          <div className="glass-card p-8 flex flex-col h-full relative border-blue-500 shadow-[0_0_30px_rgba(37,99,235,0.15)] transform md:-translate-y-4">
+          <div className="glass-card p-8 flex flex-col h-full relative border-violet-400 shadow-[0_0_30px_rgba(37,99,235,0.15)] transform md:-translate-y-4">
             <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-blue-500 to-sky-400 rounded-t-2xl" />
             <div className="absolute top-0 right-8 transform -translate-y-1/2">
-              <span className="bg-gradient-to-r from-blue-600 to-sky-500 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-lg">
+              <span className="bg-gradient-to-r from-blue-600 to-sky-500 text-zinc-900 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-lg">
                 Most Popular
               </span>
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">Student Pro</h3>
-            <p className="text-slate-400 text-sm mb-6 h-10">Maximum visibility and unlimited assessments for serious talent.</p>
+            <h3 className="text-xl font-bold text-zinc-900 mb-2">Student Pro</h3>
+            <p className="text-zinc-500 text-sm mb-6 h-10">Maximum visibility and unlimited assessments for serious talent.</p>
             <div className="mb-8">
-              <span className="text-5xl font-bold text-white">
+              <span className="text-5xl font-bold text-zinc-900">
                 ₹{isAnnual ? '499' : '749'}
               </span>
-              <span className="text-slate-400">/mo</span>
+              <span className="text-zinc-500">/mo</span>
             </div>
             <ul className="space-y-4 mb-8 flex-1">
               {['Enhanced public profile', 'Unlimited skill assessments', 'Blockchain verified credentials', 'Priority AI matching', 'Direct messaging with employers', 'Premium support'].map((feature, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-sky-400 shrink-0" />
-                  <span className="text-slate-200 text-sm">{feature}</span>
+                  <CheckCircle2 className="w-5 h-5 text-violet-600 shrink-0" />
+                  <span className="text-zinc-700 text-sm">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -110,19 +110,19 @@ export default function Pricing() {
 
           {/* Employer Plan */}
           <div className="glass-card p-8 flex flex-col h-full">
-            <h3 className="text-xl font-bold text-white mb-2">Employer Startup</h3>
-            <p className="text-slate-400 text-sm mb-6 h-10">Access verified talent without the agency fees.</p>
+            <h3 className="text-xl font-bold text-zinc-900 mb-2">Employer Startup</h3>
+            <p className="text-zinc-500 text-sm mb-6 h-10">Access verified talent without the agency fees.</p>
             <div className="mb-8">
-              <span className="text-5xl font-bold text-white">
+              <span className="text-5xl font-bold text-zinc-900">
                 ₹{isAnnual ? '4,999' : '7,499'}
               </span>
-              <span className="text-slate-400">/mo</span>
+              <span className="text-zinc-500">/mo</span>
             </div>
             <ul className="space-y-4 mb-8 flex-1">
               {['Access to full talent pool', 'Post up to 5 projects/mo', 'Basic AI candidate matching', 'In-platform messaging', 'Standard contract templates'].map((feature, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0" />
-                  <span className="text-slate-300 text-sm">{feature}</span>
+                  <span className="text-zinc-600 text-sm">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -134,7 +134,7 @@ export default function Pricing() {
 
         {/* FAQ Section */}
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-10">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-zinc-900 text-center mb-10">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="w-full space-y-4">
             {[
               {
@@ -159,10 +159,10 @@ export default function Pricing() {
               }
             ].map((faq, i) => (
               <AccordionItem key={i} value={`item-${i}`} className="glass-card border-none px-6">
-                <AccordionTrigger className="text-white hover:text-sky-400 hover:no-underline font-medium text-left">
+                <AccordionTrigger className="text-zinc-900 hover:text-violet-600 hover:no-underline font-medium text-left">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-slate-400 leading-relaxed pb-6">
+                <AccordionContent className="text-zinc-500 leading-relaxed pb-6">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>

@@ -97,32 +97,32 @@ export default function Assessment() {
   const progressPercent = ((currentQuestion) / questions.length) * 100;
 
   return (
-    <div className="min-h-screen bg-[#0F172A] pt-20 flex flex-col md:flex-row">
+    <div className="min-h-screen bg-background pt-20 flex flex-col md:flex-row">
       {/* Left Sidebar */}
-      <div className="w-full md:w-64 bg-slate-900 border-r border-slate-800 p-6 flex flex-col hidden md:flex h-[calc(100vh-80px)] sticky top-20">
-        <h3 className="text-slate-400 text-xs font-bold uppercase tracking-wider mb-6">Assessment</h3>
+      <div className="w-full md:w-64 bg-zinc-50 border-r border-zinc-200 p-6 flex flex-col hidden md:flex h-[calc(100vh-80px)] sticky top-20">
+        <h3 className="text-zinc-500 text-xs font-bold uppercase tracking-wider mb-6">Assessment</h3>
         
-        <div className="flex items-center gap-3 mb-8 p-3 bg-slate-800/50 rounded-lg border border-slate-700">
+        <div className="flex items-center gap-3 mb-8 p-3 bg-violet-50/70 rounded-lg border border-zinc-200">
           <Clock className="text-amber-500 w-5 h-5" />
-          <span className="text-white font-mono text-lg">{formatTime(timeLeft)}</span>
+          <span className="text-zinc-900 font-mono text-lg">{formatTime(timeLeft)}</span>
         </div>
 
-        <div className="mb-4 text-sm font-medium text-slate-300 flex justify-between">
+        <div className="mb-4 text-sm font-medium text-zinc-600 flex justify-between">
           <span>Progress</span>
           <span>{currentQuestion + 1}/{questions.length}</span>
         </div>
-        <div className="w-full h-2 bg-slate-800 rounded-full mb-8">
+        <div className="w-full h-2 bg-zinc-100 rounded-full mb-8">
           <div 
-            className="h-full bg-blue-500 rounded-full transition-all duration-300"
+            className="h-full bg-violet-500 rounded-full transition-all duration-300"
             style={{ width: `${progressPercent}%` }}
           />
         </div>
 
-        <h4 className="text-sm font-medium text-slate-400 mb-4">Questions</h4>
+        <h4 className="text-sm font-medium text-zinc-500 mb-4">Questions</h4>
         <div className="grid grid-cols-4 gap-2">
           {questions.map((_, i) => {
-            let statusClass = "bg-slate-800 text-slate-400 border-slate-700";
-            if (i === currentQuestion) statusClass = "bg-blue-600 text-white border-blue-500";
+            let statusClass = "bg-zinc-100 text-zinc-500 border-zinc-200";
+            if (i === currentQuestion) statusClass = "bg-violet-600 text-white border-violet-500";
             else if (answers[i] !== undefined) statusClass = "bg-green-500/20 text-green-400 border-green-500/50";
             
             if (markedForReview.has(i) && i !== currentQuestion) {
@@ -148,18 +148,18 @@ export default function Assessment() {
       {/* Main Content */}
       <div className="flex-1 p-6 md:p-12 max-w-4xl mx-auto w-full">
         <div className="flex justify-between items-center mb-8">
-          <span className="text-sky-400 font-medium bg-blue-900/30 px-3 py-1 rounded-full text-sm border border-blue-800">
+          <span className="text-violet-600 font-medium bg-violet-50 px-3 py-1 rounded-full text-sm border border-violet-200">
             Core Electronics & Communication
           </span>
-          <Button variant="ghost" className="text-slate-400 hover:text-white" onClick={() => {}}>
+          <Button variant="ghost" className="text-zinc-500 hover:text-zinc-900" onClick={() => {}}>
             <HelpCircle className="w-4 h-4 mr-2" />
             Report Issue
           </Button>
         </div>
 
         <div className="mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-white leading-relaxed">
-            <span className="text-slate-500 mr-4">{currentQuestion + 1}.</span>
+          <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 leading-relaxed">
+            <span className="text-zinc-9000 mr-4">{currentQuestion + 1}.</span>
             {q.text}
           </h2>
         </div>
@@ -171,27 +171,27 @@ export default function Assessment() {
               onClick={() => setSelectedOption(i)}
               className={`w-full text-left p-6 rounded-xl border-2 transition-all duration-200 flex items-center gap-4 group
                 ${selectedOption === i 
-                  ? 'bg-blue-900/20 border-blue-500 shadow-[0_0_15px_rgba(37,99,235,0.15)]' 
-                  : 'bg-slate-800/50 border-slate-700 hover:border-slate-500 hover:bg-slate-800'
+                  ? 'bg-violet-50 border-violet-400 shadow-[0_0_15px_rgba(37,99,235,0.15)]' 
+                  : 'bg-violet-50/70 border-zinc-200 hover:border-slate-500 hover:bg-zinc-100'
                 }
               `}
             >
               <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors
-                ${selectedOption === i ? 'border-blue-500' : 'border-slate-500 group-hover:border-slate-400'}
+                ${selectedOption === i ? 'border-violet-400' : 'border-slate-500 group-hover:border-slate-400'}
               `}>
                 {selectedOption === i && <div className="w-3 h-3 rounded-full bg-blue-500" />}
               </div>
-              <span className={`text-lg ${selectedOption === i ? 'text-white' : 'text-slate-300 group-hover:text-slate-200'}`}>
+              <span className={`text-lg ${selectedOption === i ? 'text-zinc-900' : 'text-zinc-600 group-hover:text-zinc-700'}`}>
                 {opt}
               </span>
             </button>
           ))}
         </div>
 
-        <div className="flex justify-between items-center pt-8 border-t border-slate-800">
+        <div className="flex justify-between items-center pt-8 border-t border-zinc-200">
           <Button 
             variant="outline" 
-            className={`border-slate-700 ${markedForReview.has(currentQuestion) ? 'text-amber-500 border-amber-500/50 hover:bg-amber-500/10' : 'text-slate-300'}`}
+            className={`border-zinc-200 ${markedForReview.has(currentQuestion) ? 'text-amber-500 border-amber-500/50 hover:bg-amber-500/10' : 'text-zinc-600'}`}
             onClick={toggleReview}
           >
             {markedForReview.has(currentQuestion) ? 'Unmark Review' : 'Mark for Review'}
@@ -216,10 +216,10 @@ export default function Assessment() {
 
       {/* Results Modal */}
       <Dialog open={showResults} onOpenChange={setShowResults}>
-        <DialogContent className="bg-slate-900 border-slate-700 sm:max-w-md text-center p-8">
+        <DialogContent className="bg-zinc-50 border-zinc-200 sm:max-w-md text-center p-8">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-bold text-white text-center mb-2">Assessment Complete!</DialogTitle>
-            <DialogDescription className="text-slate-400 text-center">
+            <DialogTitle className="text-2xl font-bold text-zinc-900 text-center mb-2">Assessment Complete!</DialogTitle>
+            <DialogDescription className="text-zinc-500 text-center">
               Your TFES (Talent Forge Expertise Score) has been updated.
             </DialogDescription>
           </DialogHeader>
@@ -238,21 +238,21 @@ export default function Assessment() {
                 />
               </svg>
               <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <span className="text-4xl font-bold text-white">{score}</span>
-                <span className="text-xs text-slate-400 font-medium tracking-wide">/ 100</span>
+                <span className="text-4xl font-bold text-zinc-900">{score}</span>
+                <span className="text-xs text-zinc-500 font-medium tracking-wide">/ 100</span>
               </div>
             </div>
           </div>
           
-          <div className="bg-slate-800/50 p-4 rounded-lg mb-6 text-left">
-            <h4 className="text-white font-medium mb-2 flex items-center gap-2">
+          <div className="bg-violet-50/70 p-4 rounded-lg mb-6 text-left">
+            <h4 className="text-zinc-900 font-medium mb-2 flex items-center gap-2">
               <CheckCircle2 className="text-green-500 w-4 h-4" /> 
               Skills Verified:
             </h4>
             <div className="flex flex-wrap gap-2">
-              <span className="px-2 py-1 bg-slate-700 rounded text-xs text-slate-300">Circuit Theory</span>
-              <span className="px-2 py-1 bg-slate-700 rounded text-xs text-slate-300">Signal Processing</span>
-              <span className="px-2 py-1 bg-slate-700 rounded text-xs text-slate-300">Embedded Systems</span>
+              <span className="px-2 py-1 bg-zinc-200 rounded text-xs text-zinc-600">Circuit Theory</span>
+              <span className="px-2 py-1 bg-zinc-200 rounded text-xs text-zinc-600">Signal Processing</span>
+              <span className="px-2 py-1 bg-zinc-200 rounded text-xs text-zinc-600">Embedded Systems</span>
             </div>
           </div>
 

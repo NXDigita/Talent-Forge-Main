@@ -28,17 +28,17 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#1E293B]/80 backdrop-blur-md border-b border-[#334155]"
+          ? "bg-white/80 backdrop-blur-md border-b border-zinc-200"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-sky-400 flex items-center justify-center text-white font-bold shadow-[0_0_15px_rgba(56,189,248,0.5)]">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-purple-400 flex items-center justify-center text-white font-bold shadow-[0_0_15px_rgba(124,58,237,0.4)]">
             TF
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-xl leading-none text-slate-50 tracking-tight">
+            <span className="font-bold text-xl leading-none text-zinc-900 tracking-tight">
               Talent Forge
             </span>
             <span className="text-[10px] text-amber-500 font-medium leading-none tracking-wider uppercase">
@@ -53,8 +53,8 @@ export function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-sky-400 ${
-                location === link.href ? "text-sky-400" : "text-slate-300"
+              className={`text-sm font-medium transition-colors hover:text-violet-600 ${
+                location === link.href ? "text-violet-600" : "text-zinc-600"
               }`}
             >
               {link.name}
@@ -66,11 +66,11 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-4">
           <Link
             href="/dashboard/student"
-            className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+            className="text-sm font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
           >
             Log in
           </Link>
-          <Button className="bg-gradient-to-r from-blue-600 to-sky-400 hover:from-blue-500 hover:to-sky-300 text-white border-0 shadow-[0_4px_14px_0_rgba(37,99,235,0.39)] transition-all duration-200">
+          <Button className="bg-gradient-to-r from-violet-600 to-purple-500 hover:from-violet-500 hover:to-purple-400 text-white border-0 shadow-[0_4px_14px_0_rgba(124,58,237,0.35)] transition-all duration-200">
             Get Started
             <ChevronRight className="w-4 h-4 ml-1" />
           </Button>
@@ -78,7 +78,7 @@ export function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-slate-300 hover:text-white"
+          className="md:hidden text-zinc-600 hover:text-zinc-900"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X /> : <Menu />}
@@ -87,28 +87,28 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-20 left-0 right-0 bg-[#0F172A] border-b border-[#334155] p-4 flex flex-col gap-4 shadow-xl">
+        <div className="md:hidden absolute top-20 left-0 right-0 bg-background border-b border-zinc-200 p-4 flex flex-col gap-4 shadow-xl">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               className={`text-base font-medium py-2 ${
-                location === link.href ? "text-sky-400" : "text-slate-300"
+                location === link.href ? "text-violet-600" : "text-zinc-600"
               }`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
             </Link>
           ))}
-          <div className="h-px bg-slate-800 my-2" />
+          <div className="h-px bg-zinc-100 my-2" />
           <Link
             href="/dashboard/student"
-            className="text-base font-medium text-slate-300 py-2"
+            className="text-base font-medium text-zinc-600 py-2"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Log in
           </Link>
-          <Button className="w-full bg-gradient-to-r from-blue-600 to-sky-400 text-white border-0 mt-2">
+          <Button className="w-full bg-gradient-to-r from-violet-600 to-purple-500 text-white border-0 mt-2">
             Get Started
           </Button>
         </div>
