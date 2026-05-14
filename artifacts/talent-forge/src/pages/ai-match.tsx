@@ -245,11 +245,27 @@ export default function AIMatch() {
           </div>
         </div>
 
-        <div className="flex flex-1 overflow-hidden">
+        <div className="flex flex-1 overflow-hidden relative">
 
-          {/* Filter panel */}
+          {/* Mobile backdrop */}
           {showFilters && (
-            <div className="w-72 shrink-0 border-r border-zinc-200 bg-zinc-50/50 overflow-y-auto p-5 space-y-6">
+            <div
+              className="fixed inset-0 z-40 bg-black/40 md:hidden"
+              onClick={() => setShowFilters(false)}
+            />
+          )}
+
+          {/* Filter panel — full-screen overlay on mobile, side panel on desktop */}
+          {showFilters && (
+            <div className="fixed md:relative inset-y-0 left-0 z-50 md:z-auto w-80 md:w-72 shrink-0 border-r border-zinc-200 bg-white md:bg-zinc-50/50 overflow-y-auto p-5 space-y-6 h-full shadow-2xl md:shadow-none">
+
+              {/* Mobile close button */}
+              <div className="flex items-center justify-between md:hidden pb-2 border-b border-zinc-100">
+                <span className="font-bold text-zinc-900">Filters</span>
+                <button onClick={() => setShowFilters(false)} className="p-1.5 rounded-lg hover:bg-zinc-100">
+                  <X className="w-5 h-5 text-zinc-500" />
+                </button>
+              </div>
 
               {/* Search box */}
               <div>
