@@ -236,7 +236,7 @@ export default function Marketplace() {
                           Verified Talent Only
                         </div>
                       ) : (
-                        <div className="text-xs text-zinc-9000">Open to all</div>
+                        <div className="text-xs text-zinc-500">Open to all</div>
                       )}
                       <Button className="btn-gradient">Apply Now</Button>
                     </div>

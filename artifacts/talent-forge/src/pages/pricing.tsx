@@ -63,7 +63,7 @@ export default function Pricing() {
             <ul className="space-y-4 mb-8 flex-1">
               {['Basic public profile', 'Up to 3 skill assessments/mo', 'Community forum access', 'Standard job matching'].map((feature, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-zinc-9000 shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-zinc-500 shrink-0" />
                   <span className="text-zinc-600 text-sm">{feature}</span>
                 </li>
               ))}

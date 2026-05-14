@@ -159,7 +159,7 @@ export default function Assessment() {
 
         <div className="mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 leading-relaxed">
-            <span className="text-zinc-9000 mr-4">{currentQuestion + 1}.</span>
+            <span className="text-zinc-500 mr-4">{currentQuestion + 1}.</span>
             {q.text}
           </h2>
         </div>

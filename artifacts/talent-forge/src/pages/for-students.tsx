@@ -133,7 +133,7 @@ export default function ForStudents() {
               <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500 mb-4 font-mono">
                 ₹{monthlyEarnings.toLocaleString('en-IN')}
               </div>
-              <p className="text-sm text-zinc-9000 mb-8">Based on average project rates for {tier}s in this domain.</p>
+              <p className="text-sm text-zinc-500 mb-8">Based on average project rates for {tier}s in this domain.</p>
               <Button className="w-full btn-gradient">Start Earning</Button>
             </div>
           </div>

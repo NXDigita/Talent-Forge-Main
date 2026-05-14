@@ -56,13 +56,13 @@ export function Footer() {
         </div>
 
         <div className="border-t border-zinc-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-zinc-9000 text-sm">
+          <p className="text-zinc-500 text-sm">
             © {new Date().getFullYear()} Talent Forge by ResourceIndia.co. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <a href="#" className="text-zinc-9000 hover:text-zinc-900 transition-colors">Twitter</a>
-            <a href="#" className="text-zinc-9000 hover:text-zinc-900 transition-colors">LinkedIn</a>
-            <a href="#" className="text-zinc-9000 hover:text-zinc-900 transition-colors">GitHub</a>
+            <a href="#" className="text-zinc-500 hover:text-zinc-900 transition-colors">Twitter</a>
+            <a href="#" className="text-zinc-500 hover:text-zinc-900 transition-colors">LinkedIn</a>
+            <a href="#" className="text-zinc-500 hover:text-zinc-900 transition-colors">GitHub</a>
           </div>
         </div>
       </div>

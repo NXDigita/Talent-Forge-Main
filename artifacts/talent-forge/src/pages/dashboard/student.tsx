@@ -196,7 +196,7 @@ export default function StudentDashboard() {
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="flex flex-col items-end">
-                        <span className="text-xs text-zinc-9000 mb-1">Match Score</span>
+                        <span className="text-xs text-zinc-500 mb-1">Match Score</span>
                         <span className="text-sm font-bold text-green-400">{job.match}%</span>
                       </div>
                       <Button size="sm" className="btn-gradient">Apply</Button>
@@ -224,7 +224,7 @@ export default function StudentDashboard() {
               <div className="w-full h-3 bg-zinc-100 rounded-full mb-3 overflow-hidden">
                 <div className="h-full bg-gradient-to-r from-blue-500 to-blue-600 w-[70%]" />
               </div>
-              <div className="flex justify-between text-xs font-medium text-zinc-9000">
+              <div className="flex justify-between text-xs font-medium text-zinc-500">
                 <span>1,050 XP</span>
                 <span>1,500 XP</span>
               </div>

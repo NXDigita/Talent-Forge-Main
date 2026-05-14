@@ -1,26 +1,18 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { ShieldCheck, Zap, Users, TrendingUp, ChevronRight, CheckCircle2 } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 export default function ForEmployers() {
-  const { toast } = useToast();
   const [hires, setHires] = useState([10]);
   const [costPerHire, setCostPerHire] = useState([50000]);
 
   // ROI Calculation
   const traditionalCost = hires[0] * costPerHire[0];
-  const talentForgeCost = hires[0] * 15000; // Flat fee or lower average cost
+  const talentForgeCost = hires[0] * 15000;
   const savings = traditionalCost - talentForgeCost;
   const savingsPercentage = Math.round((savings / traditionalCost) * 100);
-
-  const handleCtaClick = () => {
-    toast({
-      title: "Feature coming soon!",
-      description: "Join the waitlist to get early access.",
-    });
-  };
 
   return (
     <div className="min-h-screen bg-background pt-24 pb-20">
@@ -39,15 +31,17 @@ export default function ForEmployers() {
           <p className="text-xl text-zinc-500 max-w-2xl mx-auto mb-10">
             Access a pre-vetted pool of top engineering talent. Our AI matches you with candidates who have proven their skills through rigorous assessments.
           </p>
-          <Button onClick={handleCtaClick} className="btn-gradient h-12 px-8 text-lg">
-            Post a Project
-            <ChevronRight className="ml-2 w-5 h-5" />
-          </Button>
+          <Link href="/post-project">
+            <Button className="btn-gradient h-12 px-8 text-lg">
+              Post a Project
+              <ChevronRight className="ml-2 w-5 h-5" />
+            </Button>
+          </Link>
         </div>
 
         {/* Trust Signals */}
         <div className="border-y border-zinc-200 py-10 mb-20 bg-zinc-50/50">
-          <p className="text-center text-zinc-9000 text-sm font-medium uppercase tracking-wider mb-6">Trusted by innovative companies</p>
+          <p className="text-center text-zinc-500 text-sm font-medium uppercase tracking-wider mb-6">Trusted by innovative companies</p>
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale">
             <div className="text-xl font-bold text-zinc-900">Acme Corp</div>
             <div className="text-xl font-bold text-zinc-900">GlobalTech</div>
@@ -139,9 +133,11 @@ export default function ForEmployers() {
                 <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-blue-700 flex-shrink-0" /> Pre-verified skills guarantee</li>
               </ul>
               
-              <Button onClick={handleCtaClick} className="w-full bg-white text-zinc-900 hover:bg-zinc-100">
-                Talk to Sales
-              </Button>
+              <a href="mailto:sales@resourceindia.co">
+                <Button className="w-full bg-white text-zinc-900 hover:bg-zinc-100">
+                  Talk to Sales
+                </Button>
+              </a>
             </div>
           </div>
         </div>

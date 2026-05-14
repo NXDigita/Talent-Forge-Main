@@ -70,19 +70,19 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold text-zinc-900 mb-2">100k+</div>
-              <div className="text-sm font-medium text-zinc-9000 uppercase tracking-wider">Engineers</div>
+              <div className="text-sm font-medium text-zinc-500 uppercase tracking-wider">Engineers</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-zinc-900 mb-2">500+</div>
-              <div className="text-sm font-medium text-zinc-9000 uppercase tracking-wider">Startups</div>
+              <div className="text-sm font-medium text-zinc-500 uppercase tracking-wider">Startups</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-zinc-900 mb-2">2M+</div>
-              <div className="text-sm font-medium text-zinc-9000 uppercase tracking-wider">Assessments</div>
+              <div className="text-sm font-medium text-zinc-500 uppercase tracking-wider">Assessments</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-zinc-900 mb-2">₹50Cr</div>
-              <div className="text-sm font-medium text-zinc-9000 uppercase tracking-wider">Paid to Talent</div>
+              <div className="text-sm font-medium text-zinc-500 uppercase tracking-wider">Paid to Talent</div>
             </div>
           </div>
         </div>
@@ -99,12 +99,12 @@ export default function About() {
             { name: "Neha K.", role: "Head of Assessment", exp: "PhD CS, IISc" }
           ].map((member, i) => (
             <div key={i} className="glass-card p-6 text-center group">
-              <div className="w-24 h-24 mx-auto rounded-full bg-zinc-100 border-2 border-zinc-200 mb-6 group-hover:border-sky-400 transition-colors flex items-center justify-center text-2xl font-bold text-zinc-9000">
+              <div className="w-24 h-24 mx-auto rounded-full bg-zinc-100 border-2 border-zinc-200 mb-6 group-hover:border-sky-400 transition-colors flex items-center justify-center text-2xl font-bold text-zinc-500">
                 {member.name.charAt(0)}
               </div>
               <h3 className="text-lg font-bold text-zinc-900 mb-1">{member.name}</h3>
               <p className="text-blue-700 text-sm font-medium mb-3">{member.role}</p>
-              <p className="text-zinc-9000 text-xs uppercase tracking-wider">{member.exp}</p>
+              <p className="text-zinc-500 text-xs uppercase tracking-wider">{member.exp}</p>
             </div>
           ))}
         </div>
@@ -112,7 +112,7 @@ export default function About() {
 
       {/* Investors / Press */}
       <section className="container mx-auto max-w-4xl px-4 text-center">
-        <p className="text-zinc-9000 text-sm font-medium uppercase tracking-wider mb-8">Backed by top tier investors</p>
+        <p className="text-zinc-500 text-sm font-medium uppercase tracking-wider mb-8">Backed by top tier investors</p>
         <div className="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
           <div className="text-2xl font-bold text-zinc-900 font-serif">Sequoia</div>
           <div className="text-2xl font-bold text-zinc-900 tracking-widest">LIGHTSPEED</div>
