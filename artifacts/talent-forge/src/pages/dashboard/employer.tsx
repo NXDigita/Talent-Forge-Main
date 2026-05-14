@@ -11,7 +11,8 @@ import {
   Search,
   CheckCircle2,
   Clock,
-  ArrowUpRight
+  ArrowUpRight,
+  Sparkles
 } from "lucide-react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
@@ -43,6 +44,11 @@ export default function EmployerDashboard() {
           <Link href="/dashboard/employer" className="flex items-center gap-3 px-4 py-3 text-zinc-900 bg-blue-50 border border-blue-200 rounded-lg transition-colors">
             <LayoutDashboard className="w-5 h-5 text-blue-600" />
             <span className="font-medium">Overview</span>
+          </Link>
+          <Link href="/ai-match" className="flex items-center gap-3 px-4 py-3 text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 rounded-lg transition-colors">
+            <Sparkles className="w-5 h-5" />
+            <span className="font-medium">AI Matching</span>
+            <span className="ml-auto text-[10px] font-bold bg-blue-600 text-white px-1.5 py-0.5 rounded-full">NEW</span>
           </Link>
           <Link href="#" className="flex items-center gap-3 px-4 py-3 text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 rounded-lg transition-colors">
             <Users className="w-5 h-5" />
