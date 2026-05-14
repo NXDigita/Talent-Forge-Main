@@ -74,7 +74,7 @@ export default function EmployerDashboard() {
       <div className="flex-1 p-6 md:p-8 max-w-7xl mx-auto w-full">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold text-zinc-900">Employer Overview</h1>
-          <Button className="btn-gradient">Post New Project</Button>
+          <Link href="/post-project"><Button className="btn-gradient">Post New Project</Button></Link>
         </div>
 
         {/* Stats Row */}
@@ -102,7 +102,7 @@ export default function EmployerDashboard() {
           <div className="glass-card p-6 border-t-4 border-t-emerald-500">
             <h3 className="text-zinc-500 font-medium mb-4 text-sm uppercase tracking-wider">Avg Time to Hire</h3>
             <div className="flex items-end justify-between">
-              <div className="text-3xl font-bold text-zinc-900">42<span className="text-lg text-zinc-9000 ml-1">hrs</span></div>
+              <div className="text-3xl font-bold text-zinc-900">42<span className="text-lg text-zinc-500 ml-1">hrs</span></div>
               <div className="flex items-center text-green-400 text-sm font-medium bg-green-400/10 px-2 py-1 rounded">
                 -12% vs avg
               </div>

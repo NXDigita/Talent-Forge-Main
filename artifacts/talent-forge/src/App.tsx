@@ -14,6 +14,7 @@ import Assessment from "@/pages/assessment";
 import Marketplace from "@/pages/marketplace";
 import StudentDashboard from "@/pages/dashboard/student";
 import EmployerDashboard from "@/pages/dashboard/employer";
+import PostProject from "@/pages/post-project";
 import Pricing from "@/pages/pricing";
 import About from "@/pages/about";
 
@@ -21,7 +22,7 @@ const queryClient = new QueryClient();
 
 function Router() {
   return (
-    <div className="min-h-[100dvh] flex flex-col bg-[#0F172A]">
+    <div className="min-h-[100dvh] flex flex-col bg-background">
       <Navbar />
       <main className="flex-1">
         <Switch>
@@ -33,6 +34,7 @@ function Router() {
           <Route path="/marketplace" component={Marketplace} />
           <Route path="/dashboard/student" component={StudentDashboard} />
           <Route path="/dashboard/employer" component={EmployerDashboard} />
+          <Route path="/post-project" component={PostProject} />
           <Route path="/pricing" component={Pricing} />
           <Route path="/about" component={About} />
           <Route component={NotFound} />
