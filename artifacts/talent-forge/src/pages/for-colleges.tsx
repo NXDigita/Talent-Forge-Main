@@ -1,17 +1,8 @@
-import { useToast } from "@/hooks/use-toast";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Building2, TrendingUp, Shield, BarChart3, ChevronRight } from "lucide-react";
 
 export default function ForColleges() {
-  const { toast } = useToast();
-
-  const handleCtaClick = () => {
-    toast({
-      title: "Feature coming soon!",
-      description: "Join the waitlist for institutional access.",
-    });
-  };
-
   return (
     <div className="min-h-screen bg-background pt-24 pb-20">
       <div className="container mx-auto max-w-6xl px-4">
@@ -29,13 +20,17 @@ export default function ForColleges() {
             Partner with Talent Forge to give your students direct access to verifiable skill assessments and a premier talent marketplace.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button onClick={handleCtaClick} className="btn-gradient h-12 px-8">
-              Partner With Us
-              <ChevronRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button variant="outline" className="h-12 px-8 border-zinc-200 text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100">
-              Download Brochure
-            </Button>
+            <Link href="/partner">
+              <Button className="btn-gradient h-12 px-8">
+                Partner With Us
+                <ChevronRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+            <Link href="/partner">
+              <Button variant="outline" className="h-12 px-8 border-zinc-200 text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100">
+                Schedule a Demo
+              </Button>
+            </Link>
           </div>
         </div>
 
@@ -65,14 +60,16 @@ export default function ForColleges() {
             </p>
           </div>
           
-          <div className="glass-card p-8 bg-gradient-to-br from-blue-900/20 to-slate-900">
+          <div className="glass-card p-8 bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100">
             <h3 className="text-2xl font-bold text-zinc-900 mb-4">Ready to integrate?</h3>
             <p className="text-zinc-500 leading-relaxed mb-8">
               Join 50+ leading engineering colleges already using Talent Forge to empower their students.
             </p>
-            <Button onClick={handleCtaClick} className="w-full bg-white text-zinc-900 hover:bg-zinc-100">
-              Schedule a Demo
-            </Button>
+            <Link href="/partner">
+              <Button className="w-full btn-gradient">
+                Schedule a Demo
+              </Button>
+            </Link>
           </div>
         </div>
 

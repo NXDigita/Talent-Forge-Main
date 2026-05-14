@@ -15,6 +15,7 @@ import Marketplace from "@/pages/marketplace";
 import StudentDashboard from "@/pages/dashboard/student";
 import EmployerDashboard from "@/pages/dashboard/employer";
 import PostProject from "@/pages/post-project";
+import Partner from "@/pages/partner";
 import Pricing from "@/pages/pricing";
 import About from "@/pages/about";
 
@@ -35,6 +36,7 @@ function Router() {
           <Route path="/dashboard/student" component={StudentDashboard} />
           <Route path="/dashboard/employer" component={EmployerDashboard} />
           <Route path="/post-project" component={PostProject} />
+          <Route path="/partner" component={Partner} />
           <Route path="/pricing" component={Pricing} />
           <Route path="/about" component={About} />
           <Route component={NotFound} />

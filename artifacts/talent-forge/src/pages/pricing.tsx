@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Switch as ToggleSwitch } from "@/components/ui/switch";
 import { 
@@ -8,18 +9,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { CheckCircle2, X } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 export default function Pricing() {
   const [isAnnual, setIsAnnual] = useState(true);
-  const { toast } = useToast();
-
-  const handlePlanSelection = (plan: string) => {
-    toast({
-      title: "Plan selected",
-      description: `You've selected the ${plan} plan. Redirecting to signup...`,
-    });
-  };
 
   return (
     <div className="min-h-screen bg-background pt-24 pb-24">
@@ -74,9 +66,11 @@ export default function Pricing() {
                 </li>
               ))}
             </ul>
-            <Button onClick={() => handlePlanSelection('Free')} variant="outline" className="w-full border-zinc-200 text-zinc-900 hover:bg-zinc-100">
-              Get Started
-            </Button>
+            <Link href="/for-students">
+              <Button variant="outline" className="w-full border-zinc-200 text-zinc-900 hover:bg-zinc-100">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Pro Plan */}
@@ -103,9 +97,11 @@ export default function Pricing() {
                 </li>
               ))}
             </ul>
-            <Button onClick={() => handlePlanSelection('Pro')} className="w-full btn-gradient">
-              Upgrade to Pro
-            </Button>
+            <Link href="/dashboard/student">
+              <Button className="w-full btn-gradient">
+                Upgrade to Pro
+              </Button>
+            </Link>
           </div>
 
           {/* Employer Plan */}
@@ -126,9 +122,11 @@ export default function Pricing() {
                 </li>
               ))}
             </ul>
-            <Button onClick={() => handlePlanSelection('Employer')} variant="outline" className="w-full border-amber-500/50 text-amber-400 hover:bg-amber-500/10">
-              Start Hiring
-            </Button>
+            <Link href="/partner">
+              <Button variant="outline" className="w-full border-amber-500/50 text-amber-600 hover:bg-amber-50">
+                Start Hiring
+              </Button>
+            </Link>
           </div>
         </div>
 
