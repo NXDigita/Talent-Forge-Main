@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Clock, HelpCircle, CheckCircle2, ChevronRight, BrainCircuit } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -40,6 +41,7 @@ const questions = [
 ];
 
 export default function Assessment() {
+  const [, navigate] = useLocation();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [answers, setAnswers] = useState<Record<number, number>>({});
@@ -50,10 +52,9 @@ export default function Assessment() {
 
   // Timer
   useEffect(() => {
-    if (timeLeft > 0 && !showResults) {
-      const timerId = setInterval(() => setTimeLeft(t => t - 1), 1000);
-      return () => clearInterval(timerId);
-    }
+    if (timeLeft <= 0 || showResults) return;
+    const timerId = setInterval(() => setTimeLeft(t => t - 1), 1000);
+    return () => clearInterval(timerId);
   }, [timeLeft, showResults]);
 
   const formatTime = (seconds: number) => {
@@ -258,7 +259,7 @@ export default function Assessment() {
 
           <Button 
             className="w-full btn-gradient"
-            onClick={() => window.location.href = '/dashboard/student'}
+            onClick={() => navigate('/dashboard/student')}
           >
             Go to Dashboard
           </Button>

@@ -15,25 +15,24 @@ export function StatCounter({ end, suffix = "", prefix = "", label, duration = 2
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (isInView) {
-      let start = 0;
-      const endVal = end;
-      const totalFrames = Math.round(duration * 60);
-      let frame = 0;
+    if (!isInView) return;
 
-      const counter = setInterval(() => {
-        frame++;
-        const progress = frame / totalFrames;
-        const currentCount = Math.round(endVal * (1 - Math.pow(1 - progress, 3))); // easeOutCubic
-        setCount(currentCount);
+    const endVal = end;
+    const totalFrames = Math.round(duration * 60);
+    let frame = 0;
 
-        if (frame === totalFrames) {
-          clearInterval(counter);
-        }
-      }, 1000 / 60);
+    const counter = setInterval(() => {
+      frame++;
+      const progress = frame / totalFrames;
+      const currentCount = Math.round(endVal * (1 - Math.pow(1 - progress, 3)));
+      setCount(currentCount);
 
-      return () => clearInterval(counter);
-    }
+      if (frame === totalFrames) {
+        clearInterval(counter);
+      }
+    }, 1000 / 60);
+
+    return () => clearInterval(counter);
   }, [isInView, end, duration]);
 
   return (
