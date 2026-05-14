@@ -102,7 +102,7 @@ export default function Assessment() {
       <div className="w-full md:w-64 bg-zinc-50 border-r border-zinc-200 p-6 flex flex-col hidden md:flex h-[calc(100vh-80px)] sticky top-20">
         <h3 className="text-zinc-500 text-xs font-bold uppercase tracking-wider mb-6">Assessment</h3>
         
-        <div className="flex items-center gap-3 mb-8 p-3 bg-violet-50/70 rounded-lg border border-zinc-200">
+        <div className="flex items-center gap-3 mb-8 p-3 bg-blue-50/70 rounded-lg border border-zinc-200">
           <Clock className="text-amber-500 w-5 h-5" />
           <span className="text-zinc-900 font-mono text-lg">{formatTime(timeLeft)}</span>
         </div>
@@ -113,7 +113,7 @@ export default function Assessment() {
         </div>
         <div className="w-full h-2 bg-zinc-100 rounded-full mb-8">
           <div 
-            className="h-full bg-violet-500 rounded-full transition-all duration-300"
+            className="h-full bg-blue-500 rounded-full transition-all duration-300"
             style={{ width: `${progressPercent}%` }}
           />
         </div>
@@ -122,7 +122,7 @@ export default function Assessment() {
         <div className="grid grid-cols-4 gap-2">
           {questions.map((_, i) => {
             let statusClass = "bg-zinc-100 text-zinc-500 border-zinc-200";
-            if (i === currentQuestion) statusClass = "bg-violet-600 text-white border-violet-500";
+            if (i === currentQuestion) statusClass = "bg-blue-700 text-white border-blue-500";
             else if (answers[i] !== undefined) statusClass = "bg-green-500/20 text-green-400 border-green-500/50";
             
             if (markedForReview.has(i) && i !== currentQuestion) {
@@ -148,7 +148,7 @@ export default function Assessment() {
       {/* Main Content */}
       <div className="flex-1 p-6 md:p-12 max-w-4xl mx-auto w-full">
         <div className="flex justify-between items-center mb-8">
-          <span className="text-violet-600 font-medium bg-violet-50 px-3 py-1 rounded-full text-sm border border-violet-200">
+          <span className="text-blue-700 font-medium bg-blue-50 px-3 py-1 rounded-full text-sm border border-blue-200">
             Core Electronics & Communication
           </span>
           <Button variant="ghost" className="text-zinc-500 hover:text-zinc-900" onClick={() => {}}>
@@ -171,13 +171,13 @@ export default function Assessment() {
               onClick={() => setSelectedOption(i)}
               className={`w-full text-left p-6 rounded-xl border-2 transition-all duration-200 flex items-center gap-4 group
                 ${selectedOption === i 
-                  ? 'bg-violet-50 border-violet-400 shadow-[0_0_15px_rgba(37,99,235,0.15)]' 
-                  : 'bg-violet-50/70 border-zinc-200 hover:border-slate-500 hover:bg-zinc-100'
+                  ? 'bg-blue-50 border-blue-400 shadow-[0_0_15px_rgba(37,99,235,0.15)]' 
+                  : 'bg-blue-50/70 border-zinc-200 hover:border-slate-500 hover:bg-zinc-100'
                 }
               `}
             >
               <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors
-                ${selectedOption === i ? 'border-violet-400' : 'border-slate-500 group-hover:border-slate-400'}
+                ${selectedOption === i ? 'border-blue-400' : 'border-slate-500 group-hover:border-slate-400'}
               `}>
                 {selectedOption === i && <div className="w-3 h-3 rounded-full bg-blue-500" />}
               </div>
@@ -244,7 +244,7 @@ export default function Assessment() {
             </div>
           </div>
           
-          <div className="bg-violet-50/70 p-4 rounded-lg mb-6 text-left">
+          <div className="bg-blue-50/70 p-4 rounded-lg mb-6 text-left">
             <h4 className="text-zinc-900 font-medium mb-2 flex items-center gap-2">
               <CheckCircle2 className="text-green-500 w-4 h-4" /> 
               Skills Verified:

@@ -34,7 +34,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-purple-400 flex items-center justify-center text-white font-bold shadow-[0_0_15px_rgba(124,58,237,0.4)]">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-800 to-blue-600 flex items-center justify-center text-white font-bold shadow-[0_0_15px_rgba(30,64,175,0.4)]">
             TF
           </div>
           <div className="flex flex-col">
@@ -51,8 +51,8 @@ export function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-violet-600 ${
-                location === link.href ? "text-violet-600" : "text-zinc-600"
+              className={`text-sm font-medium transition-colors hover:text-blue-700 ${
+                location === link.href ? "text-blue-700" : "text-zinc-600"
               }`}
             >
               {link.name}
@@ -68,7 +68,7 @@ export function Navbar() {
           >
             Log in
           </Link>
-          <Button className="bg-gradient-to-r from-violet-600 to-purple-500 hover:from-violet-500 hover:to-purple-400 text-white border-0 shadow-[0_4px_14px_0_rgba(124,58,237,0.35)] transition-all duration-200">
+          <Button className="bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white border-0 shadow-[0_4px_14px_0_rgba(30,64,175,0.35)] transition-all duration-200">
             Get Started
             <ChevronRight className="w-4 h-4 ml-1" />
           </Button>
@@ -90,7 +90,7 @@ export function Navbar() {
               key={link.name}
               href={link.href}
               className={`text-base font-medium py-2 ${
-                location === link.href ? "text-violet-600" : "text-zinc-600"
+                location === link.href ? "text-blue-700" : "text-zinc-600"
               }`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -105,7 +105,7 @@ export function Navbar() {
           >
             Log in
           </Link>
-          <Button className="w-full bg-gradient-to-r from-violet-600 to-purple-500 text-white border-0 mt-2">
+          <Button className="w-full bg-gradient-to-r from-blue-700 to-blue-600 text-white border-0 mt-2">
             Get Started
           </Button>
         </div>

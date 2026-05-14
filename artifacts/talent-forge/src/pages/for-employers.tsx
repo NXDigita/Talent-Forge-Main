@@ -28,13 +28,13 @@ export default function ForEmployers() {
         
         {/* Hero */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-50 border border-violet-200 text-violet-500 text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-600 text-sm font-medium mb-6">
             <ShieldCheck size={14} />
             <span>Enterprise-Grade Talent Sourcing</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-zinc-900 mb-6">
             Stop Interviewing. <br className="hidden md:block" />
-            <span className="text-violet-600">Start Verifying.</span>
+            <span className="text-blue-700">Start Verifying.</span>
           </h1>
           <p className="text-xl text-zinc-500 max-w-2xl mx-auto mb-10">
             Access a pre-vetted pool of top engineering talent. Our AI matches you with candidates who have proven their skills through rigorous assessments.
@@ -63,8 +63,8 @@ export default function ForEmployers() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { icon: <Zap className="text-amber-500" />, title: "1. AI Matching", desc: "Our algorithm instantly matches your requirements with candidates who have the exact verified skills you need." },
-              { icon: <ShieldCheck className="text-violet-600" />, title: "2. Verify Credentials", desc: "Review blockchain-backed proof of competence, including actual code, assessment scores, and past project deliveries." },
-              { icon: <Users className="text-violet-500" />, title: "3. Hire & Onboard", desc: "Engage talent for freelance projects or full-time roles with zero friction and a streamlined contract process." }
+              { icon: <ShieldCheck className="text-blue-700" />, title: "2. Verify Credentials", desc: "Review blockchain-backed proof of competence, including actual code, assessment scores, and past project deliveries." },
+              { icon: <Users className="text-blue-600" />, title: "3. Hire & Onboard", desc: "Engage talent for freelance projects or full-time roles with zero friction and a streamlined contract process." }
             ].map((step, i) => (
               <div key={i} className="glass-card p-8 relative overflow-hidden group">
                 <div className="absolute -right-4 -top-4 w-24 h-24 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all duration-500" />
@@ -79,7 +79,7 @@ export default function ForEmployers() {
         </div>
 
         {/* ROI Calculator */}
-        <div className="glass-card p-8 md:p-12 border border-violet-200 relative overflow-hidden">
+        <div className="glass-card p-8 md:p-12 border border-blue-200 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-transparent pointer-events-none" />
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
@@ -94,7 +94,7 @@ export default function ForEmployers() {
                 <div>
                   <label className="text-sm font-medium text-zinc-600 mb-4 flex justify-between">
                     <span>Hires per quarter</span>
-                    <span className="text-violet-600 font-bold bg-zinc-100 px-3 py-1 rounded-md">{hires[0]}</span>
+                    <span className="text-blue-700 font-bold bg-zinc-100 px-3 py-1 rounded-md">{hires[0]}</span>
                   </label>
                   <Slider 
                     value={hires} 
@@ -108,7 +108,7 @@ export default function ForEmployers() {
                 <div>
                   <label className="text-sm font-medium text-zinc-600 mb-4 flex justify-between">
                     <span>Traditional Cost per Hire (₹)</span>
-                    <span className="text-violet-600 font-bold bg-zinc-100 px-3 py-1 rounded-md">₹{costPerHire[0].toLocaleString()}</span>
+                    <span className="text-blue-700 font-bold bg-zinc-100 px-3 py-1 rounded-md">₹{costPerHire[0].toLocaleString()}</span>
                   </label>
                   <Slider 
                     value={costPerHire} 
@@ -134,9 +134,9 @@ export default function ForEmployers() {
               </div>
               
               <ul className="text-left space-y-3 mb-8 text-zinc-600 mx-auto max-w-xs w-full">
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-violet-600 flex-shrink-0" /> Zero technical interview time</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-violet-600 flex-shrink-0" /> No resume screening overhead</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-violet-600 flex-shrink-0" /> Pre-verified skills guarantee</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-blue-700 flex-shrink-0" /> Zero technical interview time</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-blue-700 flex-shrink-0" /> No resume screening overhead</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-blue-700 flex-shrink-0" /> Pre-verified skills guarantee</li>
               </ul>
               
               <Button onClick={handleCtaClick} className="w-full bg-white text-zinc-900 hover:bg-zinc-100">

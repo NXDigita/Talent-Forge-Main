@@ -80,7 +80,7 @@ export default function Pricing() {
           </div>
 
           {/* Pro Plan */}
-          <div className="glass-card p-8 flex flex-col h-full relative border-violet-400 shadow-[0_0_30px_rgba(37,99,235,0.15)] transform md:-translate-y-4">
+          <div className="glass-card p-8 flex flex-col h-full relative border-blue-400 shadow-[0_0_30px_rgba(37,99,235,0.15)] transform md:-translate-y-4">
             <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-blue-500 to-sky-400 rounded-t-2xl" />
             <div className="absolute top-0 right-8 transform -translate-y-1/2">
               <span className="bg-gradient-to-r from-blue-600 to-sky-500 text-zinc-900 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-lg">
@@ -98,7 +98,7 @@ export default function Pricing() {
             <ul className="space-y-4 mb-8 flex-1">
               {['Enhanced public profile', 'Unlimited skill assessments', 'Blockchain verified credentials', 'Priority AI matching', 'Direct messaging with employers', 'Premium support'].map((feature, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-violet-600 shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-blue-700 shrink-0" />
                   <span className="text-zinc-700 text-sm">{feature}</span>
                 </li>
               ))}
@@ -159,7 +159,7 @@ export default function Pricing() {
               }
             ].map((faq, i) => (
               <AccordionItem key={i} value={`item-${i}`} className="glass-card border-none px-6">
-                <AccordionTrigger className="text-zinc-900 hover:text-violet-600 hover:no-underline font-medium text-left">
+                <AccordionTrigger className="text-zinc-900 hover:text-blue-700 hover:no-underline font-medium text-left">
                   {faq.q}
                 </AccordionTrigger>
                 <AccordionContent className="text-zinc-500 leading-relaxed pb-6">

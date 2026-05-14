@@ -150,7 +150,7 @@ export default function Marketplace() {
                 <button
                   key={domain}
                   onClick={() => setSelectedDomain(domain === selectedDomain ? null : domain)}
-                  className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${selectedDomain === domain ? 'bg-violet-100 text-violet-500 border border-violet-200' : 'text-zinc-600 hover:bg-zinc-100'}`}
+                  className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${selectedDomain === domain ? 'bg-blue-100 text-blue-600 border border-blue-200' : 'text-zinc-600 hover:bg-zinc-100'}`}
                 >
                   {domain}
                 </button>
@@ -162,7 +162,7 @@ export default function Marketplace() {
             <div>
               <div className="flex justify-between items-center mb-4">
                 <h3 className="text-zinc-900 font-bold uppercase tracking-wider text-sm">Max Budget</h3>
-                <span className="text-violet-600 text-sm">₹{budgetRange[0].toLocaleString()}</span>
+                <span className="text-blue-700 text-sm">₹{budgetRange[0].toLocaleString()}</span>
               </div>
               <Slider 
                 value={budgetRange} 
@@ -185,7 +185,7 @@ export default function Marketplace() {
               placeholder={`Search ${view === 'projects' ? 'projects or companies' : 'talent by name or role'}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 h-14 bg-violet-50/70 border-zinc-200 text-zinc-900 rounded-xl focus-visible:ring-blue-500"
+              className="w-full pl-12 h-14 bg-blue-50/70 border-zinc-200 text-zinc-900 rounded-xl focus-visible:ring-blue-500"
             />
           </div>
 
@@ -194,10 +194,10 @@ export default function Marketplace() {
             {view === 'projects' ? (
               filteredProjects.length > 0 ? (
                 filteredProjects.map(project => (
-                  <div key={project.id} className="glass-card p-6 flex flex-col h-full group hover:border-violet-400/50 transition-colors">
+                  <div key={project.id} className="glass-card p-6 flex flex-col h-full group hover:border-blue-400/50 transition-colors">
                     <div className="flex justify-between items-start mb-4">
                       <div>
-                        <h3 className="text-xl font-bold text-zinc-900 mb-1 group-hover:text-violet-500 transition-colors">{project.title}</h3>
+                        <h3 className="text-xl font-bold text-zinc-900 mb-1 group-hover:text-blue-600 transition-colors">{project.title}</h3>
                         <div className="flex items-center text-zinc-500 text-sm gap-2">
                           <Briefcase className="w-4 h-4" />
                           {project.company}
@@ -214,7 +214,7 @@ export default function Marketplace() {
                         <span className="font-semibold text-zinc-900">₹{project.budget.toLocaleString()}</span>
                       </div>
                       <div className="flex items-center gap-1 text-zinc-600 bg-zinc-50/50 px-3 py-1.5 rounded-lg border border-zinc-200">
-                        <Clock className="w-4 h-4 text-violet-600" />
+                        <Clock className="w-4 h-4 text-blue-700" />
                         <span>{project.duration}</span>
                       </div>
                     </div>
@@ -222,7 +222,7 @@ export default function Marketplace() {
                     <div className="mb-6 flex-1">
                       <div className="flex flex-wrap gap-2">
                         {project.skills.map(skill => (
-                          <span key={skill} className="text-xs px-2 py-1 bg-violet-50 text-violet-600 border border-violet-200 rounded-md">
+                          <span key={skill} className="text-xs px-2 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded-md">
                             {skill}
                           </span>
                         ))}
@@ -250,14 +250,14 @@ export default function Marketplace() {
             ) : (
               filteredTalent.length > 0 ? (
                 filteredTalent.map(talent => (
-                  <div key={talent.id} className="glass-card p-6 flex flex-col h-full group hover:border-violet-400/50 transition-colors">
+                  <div key={talent.id} className="glass-card p-6 flex flex-col h-full group hover:border-blue-400/50 transition-colors">
                     <div className="flex justify-between items-start mb-4">
                       <div className="flex items-center gap-4">
                         <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-sky-400 flex items-center justify-center text-zinc-900 font-bold text-lg shadow-[0_0_15px_rgba(56,189,248,0.5)]">
                           {talent.name.charAt(0)}
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-zinc-900 mb-1 group-hover:text-violet-500 transition-colors">{talent.name}</h3>
+                          <h3 className="text-xl font-bold text-zinc-900 mb-1 group-hover:text-blue-600 transition-colors">{talent.name}</h3>
                           <div className="text-zinc-500 text-sm">{talent.role}</div>
                         </div>
                       </div>
@@ -279,7 +279,7 @@ export default function Marketplace() {
                     <div className="mb-6 flex-1">
                       <div className="flex flex-wrap gap-2">
                         {talent.skills.map(skill => (
-                          <span key={skill} className="text-xs px-2 py-1 bg-violet-50 text-violet-600 border border-violet-200 rounded-md">
+                          <span key={skill} className="text-xs px-2 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded-md">
                             {skill}
                           </span>
                         ))}

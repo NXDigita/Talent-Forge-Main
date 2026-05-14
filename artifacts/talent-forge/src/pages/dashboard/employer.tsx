@@ -29,7 +29,7 @@ export default function EmployerDashboard() {
     <div className="min-h-screen bg-background pt-20 flex flex-col md:flex-row">
       {/* Sidebar */}
       <div className="w-full md:w-64 bg-zinc-50 border-r border-zinc-200 p-6 flex flex-col hidden md:flex h-[calc(100vh-80px)] sticky top-20">
-        <div className="flex items-center gap-4 mb-8 p-4 bg-violet-50/70 rounded-xl border border-zinc-200">
+        <div className="flex items-center gap-4 mb-8 p-4 bg-blue-50/70 rounded-xl border border-zinc-200">
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-blue-500 flex items-center justify-center text-zinc-900 font-bold shadow-[0_0_15px_rgba(37,99,235,0.5)]">
             AC
           </div>
@@ -40,8 +40,8 @@ export default function EmployerDashboard() {
         </div>
 
         <nav className="space-y-2 flex-1">
-          <Link href="/dashboard/employer" className="flex items-center gap-3 px-4 py-3 text-zinc-900 bg-violet-50 border border-violet-200 rounded-lg transition-colors">
-            <LayoutDashboard className="w-5 h-5 text-violet-500" />
+          <Link href="/dashboard/employer" className="flex items-center gap-3 px-4 py-3 text-zinc-900 bg-blue-50 border border-blue-200 rounded-lg transition-colors">
+            <LayoutDashboard className="w-5 h-5 text-blue-600" />
             <span className="font-medium">Overview</span>
           </Link>
           <Link href="#" className="flex items-center gap-3 px-4 py-3 text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 rounded-lg transition-colors">
@@ -152,7 +152,7 @@ export default function EmployerDashboard() {
             <div className="glass-card p-6 overflow-hidden">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-xl font-bold text-zinc-900">Active Projects</h2>
-                <Button variant="link" className="text-violet-600 p-0">View All</Button>
+                <Button variant="link" className="text-blue-700 p-0">View All</Button>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse">
@@ -174,7 +174,7 @@ export default function EmployerDashboard() {
                     <tr className="border-b border-zinc-200/50 hover:bg-zinc-100/30 transition-colors">
                       <td className="py-4 font-medium text-zinc-900">IoT Gateway Firmware</td>
                       <td className="py-4 text-zinc-600">ECE / C++</td>
-                      <td className="py-4"><span className="px-2 py-1 bg-sky-500/10 text-violet-600 rounded text-xs font-medium">Reviewing Candidates</span></td>
+                      <td className="py-4"><span className="px-2 py-1 bg-sky-500/10 text-blue-700 rounded text-xs font-medium">Reviewing Candidates</span></td>
                       <td className="py-4 text-right text-zinc-600">₹32,000</td>
                     </tr>
                     <tr className="hover:bg-zinc-100/30 transition-colors">

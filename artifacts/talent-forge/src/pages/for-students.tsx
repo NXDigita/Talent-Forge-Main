@@ -57,7 +57,7 @@ export default function ForStudents() {
                 { icon: <IndianRupee />, title: "Get Paid", desc: "Execute work and earn directly." }
               ].map((step, i) => (
                 <div key={i} className="relative flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-zinc-100 border-4 border-[#0F172A] flex items-center justify-center text-violet-600 z-10 mb-4 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
+                  <div className="w-16 h-16 rounded-full bg-zinc-100 border-4 border-[#0F172A] flex items-center justify-center text-blue-700 z-10 mb-4 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
                     {step.icon}
                   </div>
                   <h3 className="text-lg font-bold text-zinc-900 mb-2">{step.title}</h3>
@@ -81,7 +81,7 @@ export default function ForStudents() {
                 <div>
                   <label className="text-sm font-medium text-zinc-600 mb-2 flex justify-between">
                     <span>Hours per week</span>
-                    <span className="text-violet-600">{hours[0]} hrs</span>
+                    <span className="text-blue-700">{hours[0]} hrs</span>
                   </label>
                   <Slider 
                     value={hours} 
@@ -96,7 +96,7 @@ export default function ForStudents() {
                   <div>
                     <label className="text-sm font-medium text-zinc-600 mb-2 block">Domain</label>
                     <Select value={domain} onValueChange={setDomain}>
-                      <SelectTrigger className="bg-violet-50/70 border-zinc-200 text-zinc-900">
+                      <SelectTrigger className="bg-blue-50/70 border-zinc-200 text-zinc-900">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent className="bg-zinc-100 border-zinc-200 text-zinc-900">
@@ -112,7 +112,7 @@ export default function ForStudents() {
                   <div>
                     <label className="text-sm font-medium text-zinc-600 mb-2 block">Current Tier</label>
                     <Select value={tier} onValueChange={setTier}>
-                      <SelectTrigger className="bg-violet-50/70 border-zinc-200 text-zinc-900">
+                      <SelectTrigger className="bg-blue-50/70 border-zinc-200 text-zinc-900">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent className="bg-zinc-100 border-zinc-200 text-zinc-900">
@@ -130,7 +130,7 @@ export default function ForStudents() {
             
             <div className="bg-zinc-50/80 rounded-2xl p-8 border border-zinc-200 text-center">
               <p className="text-zinc-500 mb-2 uppercase tracking-wider text-sm font-semibold">Estimated Monthly Earnings</p>
-              <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 mb-4 font-mono">
+              <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500 mb-4 font-mono">
                 ₹{monthlyEarnings.toLocaleString('en-IN')}
               </div>
               <p className="text-sm text-zinc-9000 mb-8">Based on average project rates for {tier}s in this domain.</p>

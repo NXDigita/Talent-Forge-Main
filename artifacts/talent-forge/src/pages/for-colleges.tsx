@@ -18,12 +18,12 @@ export default function ForColleges() {
         
         {/* Hero */}
         <div className="text-center mb-24">
-          <div className="w-16 h-16 bg-violet-100/30 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-violet-200">
-            <Building2 className="w-8 h-8 text-violet-500" />
+          <div className="w-16 h-16 bg-blue-100/30 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-blue-200">
+            <Building2 className="w-8 h-8 text-blue-600" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-zinc-900 mb-6">
             Elevate Your Institution's <br className="hidden md:block" />
-            <span className="text-violet-500">Placement Record.</span>
+            <span className="text-blue-600">Placement Record.</span>
           </h1>
           <p className="text-xl text-zinc-500 max-w-2xl mx-auto mb-10">
             Partner with Talent Forge to give your students direct access to verifiable skill assessments and a premier talent marketplace.
@@ -42,7 +42,7 @@ export default function ForColleges() {
         {/* Value Props */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
           <div className="glass-card p-8 border-l-4 border-l-blue-500">
-            <TrendingUp className="w-10 h-10 text-violet-500 mb-6" />
+            <TrendingUp className="w-10 h-10 text-blue-600 mb-6" />
             <h3 className="text-2xl font-bold text-zinc-900 mb-4">Higher Placement Rates</h3>
             <p className="text-zinc-500 leading-relaxed">
               Students active on Talent Forge get hired 3x faster than traditional methods. Our AI matching puts your graduates in front of top startups actively looking for their specific verified skills.
@@ -58,7 +58,7 @@ export default function ForColleges() {
           </div>
           
           <div className="glass-card p-8 border-l-4 border-l-sky-400">
-            <Shield className="w-10 h-10 text-violet-600 mb-6" />
+            <Shield className="w-10 h-10 text-blue-700 mb-6" />
             <h3 className="text-2xl font-bold text-zinc-900 mb-4">Verified Reputation</h3>
             <p className="text-zinc-500 leading-relaxed">
               As an integrated partner, your institution's name is attached to verified blockchain credentials, boosting your college's reputation among top-tier employers nationwide.

@@ -20,8 +20,8 @@ export default function StudentDashboard() {
     <div className="min-h-screen bg-background pt-20 flex flex-col md:flex-row">
       {/* Sidebar */}
       <div className="w-full md:w-64 bg-zinc-50 border-r border-zinc-200 p-6 flex flex-col hidden md:flex h-[calc(100vh-80px)] sticky top-20">
-        <div className="flex items-center gap-4 mb-8 p-4 bg-violet-50/70 rounded-xl border border-zinc-200">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-violet-600 to-purple-400 flex items-center justify-center text-white font-bold text-lg shadow-[0_0_15px_rgba(124,58,237,0.3)]">
+        <div className="flex items-center gap-4 mb-8 p-4 bg-blue-50/70 rounded-xl border border-zinc-200">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-700 to-blue-500 flex items-center justify-center text-white font-bold text-lg shadow-[0_0_15px_rgba(30,64,175,0.3)]">
             JD
           </div>
           <div>
@@ -31,8 +31,8 @@ export default function StudentDashboard() {
         </div>
 
         <nav className="space-y-2 flex-1">
-          <Link href="/dashboard/student" className="flex items-center gap-3 px-4 py-3 text-zinc-900 bg-violet-50 border border-violet-200 rounded-lg transition-colors">
-            <LayoutDashboard className="w-5 h-5 text-violet-500" />
+          <Link href="/dashboard/student" className="flex items-center gap-3 px-4 py-3 text-zinc-900 bg-blue-50 border border-blue-200 rounded-lg transition-colors">
+            <LayoutDashboard className="w-5 h-5 text-blue-600" />
             <span className="font-medium">Overview</span>
           </Link>
           <Link href="#" className="flex items-center gap-3 px-4 py-3 text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 rounded-lg transition-colors">
@@ -86,7 +86,7 @@ export default function StudentDashboard() {
             <div className="flex justify-between items-start mb-4">
               <h3 className="text-zinc-500 font-medium">Completed Projects</h3>
               <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center">
-                <CheckCircle2 className="w-4 h-4 text-violet-500" />
+                <CheckCircle2 className="w-4 h-4 text-blue-600" />
               </div>
             </div>
             <div className="text-3xl font-bold text-zinc-900 mb-1">3</div>
@@ -107,8 +107,8 @@ export default function StudentDashboard() {
           <div className="glass-card p-6">
             <div className="flex justify-between items-start mb-4">
               <h3 className="text-zinc-500 font-medium">Global Rank</h3>
-              <div className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center">
-                <Award className="w-4 h-4 text-purple-500" />
+              <div className="w-8 h-8 rounded-lg bg-blue-600/10 flex items-center justify-center">
+                <Award className="w-4 h-4 text-blue-600" />
               </div>
             </div>
             <div className="text-3xl font-bold text-zinc-900 mb-1">Top 15%</div>
@@ -126,22 +126,22 @@ export default function StudentDashboard() {
             <div className="glass-card p-6">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-xl font-bold text-zinc-900">Active Missions</h2>
-                <Button variant="ghost" className="text-violet-600 hover:text-sky-300 hover:bg-sky-400/10">View All</Button>
+                <Button variant="ghost" className="text-blue-700 hover:text-sky-300 hover:bg-sky-400/10">View All</Button>
               </div>
               
               <div className="space-y-6">
                 <div className="p-4 bg-zinc-50/50 rounded-xl border border-zinc-200">
                   <div className="flex justify-between items-start mb-3">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-violet-100 flex items-center justify-center border border-violet-200">
-                        <BookOpen className="w-5 h-5 text-violet-500" />
+                      <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center border border-blue-200">
+                        <BookOpen className="w-5 h-5 text-blue-600" />
                       </div>
                       <div>
                         <h4 className="text-zinc-900 font-medium">Advanced React Assessment</h4>
                         <p className="text-xs text-zinc-500">Required for "React Expert" badge</p>
                       </div>
                     </div>
-                    <span className="text-xs font-bold text-violet-500 bg-blue-400/10 px-2 py-1 rounded">In Progress</span>
+                    <span className="text-xs font-bold text-blue-600 bg-blue-400/10 px-2 py-1 rounded">In Progress</span>
                   </div>
                   <div className="flex items-center gap-4 mt-4">
                     <div className="flex-1 h-2 bg-zinc-100 rounded-full overflow-hidden">
@@ -222,7 +222,7 @@ export default function StudentDashboard() {
               <p className="text-sm text-zinc-500 mb-6">450 XP to Expert</p>
               
               <div className="w-full h-3 bg-zinc-100 rounded-full mb-3 overflow-hidden">
-                <div className="h-full bg-gradient-to-r from-blue-500 to-purple-500 w-[70%]" />
+                <div className="h-full bg-gradient-to-r from-blue-500 to-blue-600 w-[70%]" />
               </div>
               <div className="flex justify-between text-xs font-medium text-zinc-9000">
                 <span>1,050 XP</span>
@@ -234,8 +234,8 @@ export default function StudentDashboard() {
             <div className="glass-card p-6">
               <h3 className="text-lg font-bold text-zinc-900 mb-4">Recent Credentials</h3>
               <div className="flex items-center gap-4 p-4 bg-zinc-50/50 border border-zinc-200 rounded-xl mb-3">
-                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center border border-violet-400/50">
-                  <Code2 className="w-6 h-6 text-violet-500" />
+                <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center border border-blue-400/50">
+                  <Code2 className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-zinc-900">React Foundations</h4>
@@ -251,7 +251,7 @@ export default function StudentDashboard() {
                   <p className="text-xs text-zinc-500">Verified • 1 week ago</p>
                 </div>
               </div>
-              <Button variant="link" className="w-full mt-4 text-violet-600">View Blockchain Records</Button>
+              <Button variant="link" className="w-full mt-4 text-blue-700">View Blockchain Records</Button>
             </div>
 
           </div>

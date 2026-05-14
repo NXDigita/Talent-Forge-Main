@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:wght@500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
@@ -47,7 +47,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* Warm pastel light theme — Claude/ChatGPT-inspired, Gen Z energy */
+/* Corporate Blue + Anthropic/Claude theme */
 :root {
   --button-outline: rgba(0,0,0,.10);
   --badge-outline: rgba(0,0,0,.05);
@@ -55,42 +55,42 @@
   --elevate-1: rgba(0,0,0,.03);
   --elevate-2: rgba(0,0,0,.08);
 
-  --background: 36 33% 97%;        /* warm cream #FAF9F6 */
-  --foreground: 240 10% 11%;        /* warm near-black #18181B */
+  --background: 45 24% 96%;            /* Anthropic warm cream #F7F6F0 */
+  --foreground: 222 47% 11%;            /* deep navy-black #0F172A */
 
-  --card: 0 0% 100%;                /* white */
-  --card-foreground: 240 10% 11%;
-  --card-border: 240 6% 91%;        /* very light #E4E4E7 */
+  --card: 0 0% 100%;                    /* pure white cards */
+  --card-foreground: 222 47% 11%;
+  --card-border: 214 32% 91%;           /* light blue-gray #DDE3EE */
 
   --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 11%;
-  --popover-border: 240 6% 91%;
+  --popover-foreground: 222 47% 11%;
+  --popover-border: 214 32% 91%;
 
-  --primary: 262 83% 58%;           /* soft violet #7C3AED */
+  --primary: 221 83% 40%;               /* corporate deep blue #1346B4 */
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 262 30% 96%;         /* light lavender */
-  --secondary-foreground: 262 60% 35%;
+  --secondary: 214 100% 97%;            /* very light blue tint */
+  --secondary-foreground: 221 83% 30%;
 
-  --muted: 240 5% 96%;              /* near-white */
-  --muted-foreground: 240 4% 46%;   /* medium gray #71717A */
+  --muted: 214 20% 95%;
+  --muted-foreground: 215 16% 47%;      /* blue-tinted gray */
 
-  --accent: 25 95% 53%;             /* warm coral #F97316 */
+  --accent: 35 92% 48%;                 /* warm amber gold #D97706 */
   --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
-  --border: 240 6% 91%;
-  --input: 240 6% 91%;
-  --ring: 262 83% 58%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 221 83% 40%;
 
-  --sidebar: 240 5% 96%;
-  --sidebar-foreground: 240 10% 11%;
-  --sidebar-border: 240 6% 91%;
+  --sidebar: 214 20% 95%;
+  --sidebar-foreground: 222 47% 11%;
+  --sidebar-border: 214 32% 91%;
 
-  --app-font-sans: 'Inter', sans-serif;
-  --radius: 1rem;
+  --app-font-sans: 'Plus Jakarta Sans', sans-serif;
+  --radius: 0.75rem;
 
   --primary-border: hsl(from hsl(var(--primary)) h s calc(l - 8) / alpha);
   --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l - 8) / alpha);
@@ -108,34 +108,38 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
+  h1, h2, h3 {
+    font-family: 'Lora', 'Plus Jakarta Sans', serif;
+    font-weight: 700;
+  }
 }
 
-/* Glass card — pastel light variant */
+/* Glass card — crisp corporate variant */
 .glass-card {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.90);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(139, 92, 246, 0.10);
-  border-radius: 16px;
-  box-shadow: 0 2px 16px rgba(109, 40, 217, 0.06), 0 1px 4px rgba(0,0,0,0.04);
+  border: 1px solid rgba(30, 64, 175, 0.10);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(30, 64, 175, 0.06), 0 1px 4px rgba(0,0,0,0.04);
   transition: all 0.3s ease;
 }
 
 .glass-card:hover {
-  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.14), 0 2px 8px rgba(0,0,0,0.06);
-  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(30, 64, 175, 0.12), 0 2px 8px rgba(0,0,0,0.06);
+  transform: translateY(-3px);
 }
 
-/* Gradient text — violet to coral */
+/* Gradient text — corporate blue to amber */
 .gradient-text {
-  background: linear-gradient(90deg, #7C3AED, #F97316);
+  background: linear-gradient(90deg, #1D4ED8, #D97706);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Button gradient */
+/* Button gradient — corporate blue */
 .btn-gradient {
-  background: linear-gradient(90deg, #7C3AED, #A855F7);
+  background: linear-gradient(135deg, #1E40AF, #2563EB);
   border: none;
   border-radius: 8px;
   color: white;
@@ -143,18 +147,18 @@
 }
 
 .btn-gradient:hover {
-  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.4);
-  opacity: 0.92;
+  box-shadow: 0 4px 20px rgba(30, 64, 175, 0.45);
+  opacity: 0.93;
 }
 
-/* Soft hero background */
+/* Hero background — Anthropic-inspired warm blue-cream gradient */
 .hero-bg {
-  background: linear-gradient(135deg, #F8F6FF 0%, #EDE9FE 45%, #FFF7ED 100%);
+  background: linear-gradient(135deg, #EEF2FF 0%, #DBEAFE 40%, #F7F3EE 100%);
 }
 
-/* Pastel section tint */
+/* Section tint */
 .section-tint {
-  background: linear-gradient(180deg, #F8F6FF 0%, #FAF9F7 100%);
+  background: linear-gradient(180deg, #EEF2FF 0%, #F7F6F0 100%);
 }
 
 @layer utilities {

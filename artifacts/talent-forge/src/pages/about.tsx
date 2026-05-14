@@ -38,7 +38,7 @@ export default function About() {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4 mt-8">
               <div className="glass-card p-6 text-center">
-                <Shield className="w-8 h-8 text-violet-600 mx-auto mb-3" />
+                <Shield className="w-8 h-8 text-blue-700 mx-auto mb-3" />
                 <h4 className="text-zinc-900 font-bold mb-2">Verified</h4>
                 <p className="text-xs text-zinc-500">Blockchain-backed credentials.</p>
               </div>
@@ -50,7 +50,7 @@ export default function About() {
             </div>
             <div className="space-y-4">
               <div className="glass-card p-6 text-center">
-                <Zap className="w-8 h-8 text-violet-500 mx-auto mb-3" />
+                <Zap className="w-8 h-8 text-blue-600 mx-auto mb-3" />
                 <h4 className="text-zinc-900 font-bold mb-2">Efficient</h4>
                 <p className="text-xs text-zinc-500">Instant AI matching.</p>
               </div>
@@ -103,7 +103,7 @@ export default function About() {
                 {member.name.charAt(0)}
               </div>
               <h3 className="text-lg font-bold text-zinc-900 mb-1">{member.name}</h3>
-              <p className="text-violet-600 text-sm font-medium mb-3">{member.role}</p>
+              <p className="text-blue-700 text-sm font-medium mb-3">{member.role}</p>
               <p className="text-zinc-9000 text-xs uppercase tracking-wider">{member.exp}</p>
             </div>
           ))}
