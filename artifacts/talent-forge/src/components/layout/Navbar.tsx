@@ -41,9 +41,7 @@ export function Navbar() {
             <span className="font-bold text-xl leading-none text-zinc-900 tracking-tight">
               Talent Forge
             </span>
-            <span className="text-[10px] text-amber-500 font-medium leading-none tracking-wider uppercase">
-              by ResourceIndia.co
-            </span>
+            <span className="text-[10px] text-amber-500 font-medium leading-none tracking-wider uppercase">by WIER AI.co</span>
           </div>
         </Link>
 
@@ -84,7 +82,6 @@ export function Navbar() {
           {isMobileMenuOpen ? <X /> : <Menu />}
         </button>
       </div>
-
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-20 left-0 right-0 bg-background border-b border-zinc-200 p-4 flex flex-col gap-4 shadow-xl">
