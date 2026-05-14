@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Target, Trophy, Zap, Award, BookOpen, Clock, Briefcase, IndianRupee } from "lucide-react";
+import { Target, Trophy, Zap, Award, BookOpen, Clock, Briefcase, IndianRupee, ChevronRight, Star, Shield, Cpu, FlaskConical, Wrench, Code2, Brain, BarChart2, ArrowRight, Play } from "lucide-react";
 
 export default function ForStudents() {
   const [hours, setHours] = useState([20]);
@@ -57,7 +58,7 @@ export default function ForStudents() {
                 { icon: <IndianRupee />, title: "Get Paid", desc: "Execute work and earn directly." }
               ].map((step, i) => (
                 <div key={i} className="relative flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-zinc-100 border-4 border-[#0F172A] flex items-center justify-center text-blue-700 z-10 mb-4 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
+                  <div className="w-16 h-16 rounded-full bg-blue-50 border-4 border-white flex items-center justify-center text-blue-700 z-10 mb-4 shadow-[0_0_15px_rgba(30,64,175,0.15)]">
                     {step.icon}
                   </div>
                   <h3 className="text-lg font-bold text-zinc-900 mb-2">{step.title}</h3>
@@ -65,6 +66,191 @@ export default function ForStudents() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* Assessment Section */}
+        <div className="mb-24">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-sm font-medium mb-4">
+              <Play className="w-3.5 h-3.5 fill-blue-600" />
+              Take Your Skill Assessment
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-3">
+              Prove What You Know. <span className="gradient-text">Get Verified.</span>
+            </h2>
+            <p className="text-zinc-500 max-w-2xl mx-auto">
+              Each assessment is a 30-question gamified test across your engineering domain. Pass to earn a blockchain-verified TFES badge employers can independently check.
+            </p>
+          </div>
+
+          {/* Stats bar */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            {[
+              { icon: <Shield className="w-5 h-5 text-blue-600" />, value: "4,200+", label: "Assessments taken this month" },
+              { icon: <Star className="w-5 h-5 text-amber-500" />, value: "78 avg", label: "Average TFES score" },
+              { icon: <Clock className="w-5 h-5 text-blue-600" />, value: "35 min", label: "Average completion time" },
+              { icon: <Trophy className="w-5 h-5 text-amber-500" />, value: "62%", label: "First-attempt pass rate" },
+            ].map((stat, i) => (
+              <div key={i} className="glass-card p-4 flex items-center gap-3">
+                <div className="w-9 h-9 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0">
+                  {stat.icon}
+                </div>
+                <div>
+                  <p className="font-bold text-zinc-900 text-lg leading-none">{stat.value}</p>
+                  <p className="text-xs text-zinc-500 mt-0.5">{stat.label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Domain cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+            {[
+              {
+                icon: <Code2 className="w-6 h-6" />,
+                domain: "Software / Full-Stack",
+                color: "blue",
+                questions: 30,
+                duration: "35 min",
+                difficulty: "Intermediate",
+                tfes: "+12 pts",
+                topics: ["DSA", "System Design", "APIs", "React / Node"],
+                badge: "High Demand",
+                badgeColor: "bg-blue-100 text-blue-700",
+              },
+              {
+                icon: <Brain className="w-6 h-6" />,
+                domain: "AI / Data Science",
+                color: "indigo",
+                questions: 30,
+                duration: "40 min",
+                difficulty: "Advanced",
+                tfes: "+15 pts",
+                topics: ["ML Algorithms", "Python", "Statistics", "Deep Learning"],
+                badge: "Top Paying",
+                badgeColor: "bg-amber-100 text-amber-700",
+              },
+              {
+                icon: <Cpu className="w-6 h-6" />,
+                domain: "Electronics & Embedded",
+                color: "sky",
+                questions: 30,
+                duration: "35 min",
+                difficulty: "Intermediate",
+                tfes: "+12 pts",
+                topics: ["Digital Circuits", "Microcontrollers", "PCB", "VHDL"],
+                badge: "Core Domain",
+                badgeColor: "bg-sky-100 text-sky-700",
+              },
+              {
+                icon: <Zap className="w-6 h-6" />,
+                domain: "Electrical Systems",
+                color: "yellow",
+                questions: 28,
+                duration: "30 min",
+                difficulty: "Intermediate",
+                tfes: "+10 pts",
+                topics: ["Power Systems", "Control Theory", "Transformers", "Motors"],
+                badge: "",
+                badgeColor: "",
+              },
+              {
+                icon: <Wrench className="w-6 h-6" />,
+                domain: "Mechanical Design",
+                color: "orange",
+                questions: 28,
+                duration: "30 min",
+                difficulty: "Intermediate",
+                tfes: "+10 pts",
+                topics: ["Thermodynamics", "CAD", "Fluid Mechanics", "Manufacturing"],
+                badge: "",
+                badgeColor: "",
+              },
+              {
+                icon: <BarChart2 className="w-6 h-6" />,
+                domain: "DevOps & Cloud",
+                color: "teal",
+                questions: 25,
+                duration: "28 min",
+                difficulty: "Intermediate",
+                tfes: "+11 pts",
+                topics: ["Docker", "Kubernetes", "CI/CD", "AWS / GCP"],
+                badge: "Fast Growing",
+                badgeColor: "bg-green-100 text-green-700",
+              },
+            ].map((card, i) => {
+              const iconBg: Record<string, string> = {
+                blue: "bg-blue-50 text-blue-700 border-blue-100",
+                indigo: "bg-indigo-50 text-indigo-700 border-indigo-100",
+                sky: "bg-sky-50 text-sky-700 border-sky-100",
+                yellow: "bg-amber-50 text-amber-700 border-amber-100",
+                orange: "bg-orange-50 text-orange-700 border-orange-100",
+                teal: "bg-teal-50 text-teal-700 border-teal-100",
+              };
+              const diffColor: Record<string, string> = {
+                "Intermediate": "bg-blue-50 text-blue-700",
+                "Advanced": "bg-indigo-50 text-indigo-700",
+                "Beginner": "bg-green-50 text-green-700",
+              };
+              return (
+                <div key={i} className="glass-card p-5 flex flex-col group hover:shadow-lg transition-all duration-200">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className={`w-11 h-11 rounded-xl border flex items-center justify-center shrink-0 ${iconBg[card.color]}`}>
+                      {card.icon}
+                    </div>
+                    {card.badge && (
+                      <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${card.badgeColor}`}>
+                        {card.badge}
+                      </span>
+                    )}
+                  </div>
+
+                  <h3 className="font-bold text-zinc-900 text-base mb-1">{card.domain}</h3>
+
+                  <div className="flex flex-wrap gap-1.5 mb-3">
+                    {card.topics.map(t => (
+                      <span key={t} className="text-xs px-2 py-0.5 bg-zinc-100 text-zinc-600 rounded-md border border-zinc-200">{t}</span>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center gap-3 text-xs text-zinc-500 mb-4 mt-auto">
+                    <span className="flex items-center gap-1"><BookOpen className="w-3.5 h-3.5" /> {card.questions} questions</span>
+                    <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {card.duration}</span>
+                    <span className={`px-2 py-0.5 rounded-full font-medium ${diffColor[card.difficulty]}`}>{card.difficulty}</span>
+                  </div>
+
+                  <div className="flex items-center justify-between border-t border-zinc-100 pt-4">
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-6 h-6 rounded-md bg-amber-50 border border-amber-100 flex items-center justify-center">
+                        <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-400" />
+                      </div>
+                      <span className="text-sm font-bold text-amber-700">{card.tfes}</span>
+                      <span className="text-xs text-zinc-400">TFES points</span>
+                    </div>
+                    <Link href="/assessment">
+                      <Button className="btn-gradient h-8 px-4 text-xs">
+                        Start <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* CTA banner */}
+          <div className="glass-card p-6 md:p-8 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="text-xl font-bold text-zinc-900 mb-1">Not sure which domain to pick?</h3>
+              <p className="text-zinc-500 text-sm">Take the 5-minute Domain Aptitude Quiz and let our AI recommend the best assessment track for you.</p>
+            </div>
+            <Link href="/assessment">
+              <Button className="btn-gradient h-11 px-8 shrink-0">
+                Take the Quiz <ChevronRight className="w-4 h-4 ml-1" />
+              </Button>
+            </Link>
           </div>
         </div>
 
